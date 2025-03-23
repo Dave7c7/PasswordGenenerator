@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    color: aliceblue;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 50px 40px;
+    background-color: #1F2937;
+    display: flex;
+    width: 400px;
+
+}
+#btn-pwd{
+    background-color: #4ADF86;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#divider{
+    border-top: 2px solid #2F3E53; /* You can adjust the style here */ 
+    margin-top: 20px; /* Add some spacing between paragraphs */ 
+    padding-top: 20px; /* Add spacing above the divider */ 
+}
+span
+{
+    color: #4ADF86;
+}
+.pwd-box{
+    
+    vertical-align: middle;
+    width: auto;
+    height: 20px;
+    background-color: #2F3E53;
+    border-radius: 3px;
+    color: #4ADF86;
+}
+#passwords{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    gap: 100px;
+}
