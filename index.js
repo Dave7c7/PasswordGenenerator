@@ -9,7 +9,6 @@ let length = document.getElementById("length");
 document.getElementById("userInput").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {  // Check if the Enter key was pressed
         length = this.value;  // Get the input value
-        console.log("User entered:", userNumber);  // Output it (you can send it elsewhere)
     }
 });
 
@@ -26,3 +25,22 @@ function generate(){
     pwd_two.innerHTML = password2;
 }
 
+function copy(){
+      // Get the text field
+  var copyText = pwd_one;
+  //creatign a temporary input field
+  let tempInput = document.createElement("input");
+  tempInput.value = copyText.innerHTML;
+  document.body.appendChild(tempInput);
+
+  // Select the text field
+  copyText.select();
+  document.execCommand("copy");
+
+  // Remove the input field
+  document.body.removeChild(tempInput);
+  
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+}

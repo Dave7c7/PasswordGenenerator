@@ -41,10 +41,9 @@ span
     color: #4ADF86;
 }
 .pwd-box{
-    
     vertical-align: middle;
     width: auto;
-    height: 20px;
+    height: auto;
     background-color: #2F3E53;
     border-radius: 3px;
     color: #4ADF86;
