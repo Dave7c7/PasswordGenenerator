@@ -10,8 +10,11 @@
             <div>
                 <h1>Generate a <br> <span>random password</span></h1>
                 <p>Never use an insecure password again</p>
-                <input type="number" id="userInput" placeholder="Enter a number">
-
+                <div id="input-area">
+                    <input type="number" id="userInput" placeholder="Enter a number">
+                    <p>Do not include simbols</p>
+                    <input type="checkbox" id="symbols">
+                </div>
                 <button onclick="generate()" id="btn-pwd">Generate passwords</button>
             </div>
             <div id="divider"></div> <!-- This is the divider line -->
