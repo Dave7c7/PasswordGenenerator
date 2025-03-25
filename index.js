@@ -4,15 +4,11 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 let btn = document.getElementById("btn-pwd");
 let pwd_one = document.getElementById("passwords-one");
 let pwd_two = document.getElementById("passwords-two");
-let length = document.getElementById("length");
+let length = 0;
 
-document.getElementById("userInput").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {  // Check if the Enter key was pressed
-        length = this.value;  // Get the input value
-    }
-});
 
 function generate(){
+    length = document.getElementById("userInput").value;
     let password = "";
     let password2 = "";
     for (let i = 0; i < length; i++){
@@ -27,20 +23,16 @@ function generate(){
 
 function copy(){
       // Get the text field
-  var copyText = pwd_one;
-  //creatign a temporary input field
-  let tempInput = document.createElement("input");
-  tempInput.value = copyText.innerHTML;
-  document.body.appendChild(tempInput);
+    var copyText = document.getElementById("passwords-one");
+    if(navigator.clipboard){
+        navigator.clipboard.writeText(copyText.innerText)
+        .then(() => {
+            console.log("Copied to clipboard");
+        })
+        .catch(err => {
+            console.log("Failed to copy", err);
+        });
+    }
 
-  // Select the text field
-  copyText.select();
-  document.execCommand("copy");
-
-  // Remove the input field
-  document.body.removeChild(tempInput);
-  
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
 
 }
