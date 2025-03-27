@@ -56,14 +56,24 @@ span
 }
 #input-area{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
 
 }
 #userInput{
     width: 150px;
     height: 20px;
-    border: none;
+    border: solid 1px #4ADF86;
     border-radius: 5px;
     background-color: transparent;
+    color: antiquewhite;
+    margin-right: 50px;
+}
+#btn-copy{
+    background-color: #4ADF86;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
 }

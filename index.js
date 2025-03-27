@@ -1,6 +1,7 @@
 let characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
-
+let characters1 = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
+"/"];
 let btn = document.getElementById("btn-pwd");
 let pwd_one = document.getElementById("passwords-one");
 let pwd_two = document.getElementById("passwords-two");
@@ -10,11 +11,15 @@ let length = 0;
 let checkbox = document.getElementById("symbols");
     checkbox.addEventListener("change", () => {
         if(checkbox.checked){
-            console.log("checked box works!");
-            const letters = characters.filter(char => /[a-zA-Z]/.test(char)); //return only letters
+            console.log("checked box works!" + characters);
+            let letters = characters.filter(char => /[a-zA-Z]/.test(char)); //return only letters
             characters = letters
-        }
-    })
+        }else if(checkbox.checked == false){
+            //let symbols = characters.filter(char => !/[a-zA-Z]/.test(char)); //return only symbols
+            characters = characters1;
+            console.log("unchecked box works!" + characters);
+        }     
+    });
 
 function generate(){
     length = document.getElementById("userInput").value;
